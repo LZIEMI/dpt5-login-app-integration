@@ -23,7 +23,7 @@ pipeline {
     steps {
       withSonarQubeEnv('sonar') {           
 				dir('app'){
-          sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
+                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=dpt5webapp'
         }
     }
     }
